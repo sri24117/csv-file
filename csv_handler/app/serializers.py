@@ -9,4 +9,4 @@ class DataSerializer(serializers.ModelSerializer):
 class SortedDataSerializer(serializers.ModelSerializer):
     class Meta:
         model = DataModel
-        fields = ('column1', 'column2', 'column3', ...) 
+        fields = ('column1', 'column2', 'column3') 
