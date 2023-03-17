@@ -3,7 +3,6 @@ from rest_framework.parsers import FileUploadParser
 from rest_framework.views import APIView
 from app.models import DataModel
 from app.serializers import DataSerializer
-
 from app.serializers import SortedDataSerializer
 from app.utils import get_sorted_data
 
