@@ -12,13 +12,9 @@ Next, install the required Python packages using pip:
 pip install -r requirements.txt
 To start the Django development server, run the following command:
 python manage.py runserver
+To upload a CSV file, make a POST request to the data/upload/ endpoint with the file included in the request body as a form-data field named file. The API will parse the CSV file and insert each row into a DataModel object in the database.
 
-This will start the server at http://localhost:8000/.
-
-To upload a CSV file, make a POST request to the http://localhost:8000/data/upload/ endpoint with the file included in the request body as a form-data field named file. The API will parse the CSV file and insert each row into a DataModel object in the database.
-
-To retrieve sorted data, make a GET request to the http://localhost:8000/data/sorted/ endpoint with the desired column name and sort order specified in the query parameters. For example, to sort the data by the name column in descending order, you would make the following request:
-http://localhost:8000/data/sorted/?column=name&order=desc
+To retrieve sorted data, make a GET request to the data/sorted/ endpoint with the desired column name and sort order specified in the query parameters.
 
 The API will retrieve the top 50 rows of data sorted by the specified column and order, and return it in JSON format.
 
